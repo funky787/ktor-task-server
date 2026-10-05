@@ -1,0 +1,29 @@
+### Проверка сервера
+GET http://localhost:8080/
+
+### Все задачи
+GET http://localhost:8080/tasks
+
+### Задача по id - path параметр
+GET http://localhost:8080/tasks/1
+
+### Поиск - query параметр
+GET http://localhost:8080/search?query=Ktor
+
+### Создание задачи
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "title": "Подготовиться к защите",
+  "done": false
+}
+
+### Ошибка 400
+GET http://localhost:8080/tasks/abc
+
+### Ошибка 404
+GET http://localhost:8080/tasks/999
+
+### Удаление задачи
+DELETE http://localhost:8080/tasks/2
